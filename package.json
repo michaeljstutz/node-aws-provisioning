@@ -1,0 +1,28 @@
+{
+  "name": "aws-provisioning",
+  "version": "0.1.0",
+  "description": "Node.js module for provisioning AWS services through the use of javascript objects or json files",
+  "main": "lib/aws-provisioning.js",
+  "scripts": {
+    "test": "mocha --reporterspec --bail --timeout 30000 --check-leaks test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaeljstutz/node-aws-provisioning.git"
+  },
+  "author": "Michael Stutz <michaeljstutz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaeljstutz/node-aws-provisioning/issues"
+  },
+  "homepage": "https://github.com/michaeljstutz/node-aws-provisioning#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.6"
+  },
+  "dependencies": {
+    "async": "^2.1.4",
+    "lodash": "^4.17.2"
+  }
+}
