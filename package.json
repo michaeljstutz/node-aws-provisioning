@@ -2,7 +2,7 @@
   "name": "aws-provisioning",
   "version": "0.1.0",
   "description": "Node.js module for provisioning AWS services through the use of javascript objects or json files",
-  "main": "lib/aws-provisioning.js",
+  "main": "lib/awsp.js",
   "scripts": {
     "test": "mocha --reporterspec --bail --timeout 30000 --check-leaks test/"
   },
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "async": "^2.1.4",
+    "aws-sdk": "^2.7.13",
     "lodash": "^4.17.2"
   }
 }

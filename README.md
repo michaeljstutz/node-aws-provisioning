@@ -2,42 +2,36 @@
 Node.js module for provisiong AWS services using simple javascript objects or json file
 
 ## Installation
+
+You should have the aws cli configured and working. This will automate the 
+creation of ~/.aws/credentials which is used by aws-sdk to connect to the API.
+
 Using npm:
 ```
 npm install --save aws-provisioning
 ```
 In Node.js
 ```js
-const AWSProvisioning = require('aws-provisioning');
+const AWSP = require('aws-provisioning')();
 ```
 ## Quick Overall Example
 
 ```js
 // Require AWSProvisioning
-const AWSProvisioning = require('aws-provisioning');
+const AWSP = require('aws-provisioning')();
 
-AWSProvisioning.run({
+AWSP.run({
   lambda: {
     functions: [
       {
         name: "testFunction",
-        region: "",
+        region: "us-east-1",
         timeout: 300,
         memorySize: 128,
         handler: "index.handler",
         role: "arn:aws:iam::1234567890:role/lambda_role",
         runtime: "nodejs4.3"
       }
-    ]
-  }
-});
-
-// To remove the added function...
-
-AWSProvisioning.run({
-  lambda: {
-    removeFunctions: [ 
-      "testFunction" 
     ]
   }
 });
