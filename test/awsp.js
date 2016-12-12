@@ -14,18 +14,14 @@ describe('Working with AWSP', function() {
     it('AWSP should be an object', function(){
       expect(AWSP).to.be.an('object');
     });
-    it('AWSP.checkAccountNumber()', function(done){
-      AWSP.checkAccountNumber({}, (err, params)=>{
-        expect(err).to.not.be.an('error');
-        done();
-      });
-    });
     it('AWSP.run should be a function', function(){
       expect(AWSP.run).to.be.a('function');
     });
-    it('AWSP.run() should not be an error', function(done){
+    it('AWSP.run() should function', function(done){
       AWSP.run({}, (err, params)=>{
         expect(err).to.not.be.an('error');
+        expect(params.config.region).to.be.a('string');
+        expect(params.config.account).to.be.a('string');
         done();
       });
     });

@@ -24,6 +24,7 @@
   "dependencies": {
     "async": "^2.1.4",
     "aws-sdk": "^2.7.13",
-    "lodash": "^4.17.2"
+    "lodash": "^4.17.2",
+    "node-constants": "0.0.2"
   }
 }
