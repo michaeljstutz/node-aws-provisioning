@@ -3,6 +3,8 @@ Node.js module for provisiong AWS services using simple javascript objects or js
 
 ## Installation
 
+DO NOT USE - STILL IN EARLY DEVELOPMENT
+
 You should have the aws cli configured and working. This will automate the 
 creation of ~/.aws/credentials which is used by aws-sdk to connect to the API.
 
@@ -21,19 +23,26 @@ const AWSP = require('aws-provisioning')();
 const AWSP = require('aws-provisioning')();
 
 AWSP.run({
-  lambda: {
-    functions: [
-      {
-        name: "testFunction",
-        region: "us-east-1",
-        timeout: 300,
-        memorySize: 128,
-        handler: "index.handler",
-        role: "arn:aws:iam::1234567890:role/lambda_role",
-        runtime: "nodejs4.3"
-      }
-    ]
-  }
+  "config":{
+    "region": "us-east-1",
+    "account": null
+  },
+  "services": [
+    {
+      "type": "dynamodb"
+      "objects": [
+        {
+          name: "testFunction",
+          region: "us-east-1",
+          timeout: 300,
+          memorySize: 128,
+          handler: "index.handler",
+          role: "lambda_role",
+          runtime: "nodejs4.3"
+        }
+      ]
+    }
+  ]
 });
 
 ```

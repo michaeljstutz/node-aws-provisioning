@@ -9,6 +9,8 @@ const expect = require('chai').expect
 
 const AWSP = require('../lib/awsp')();
 
+const testData = require('./test.json');
+
 describe('Working with AWSP', function() {
   describe('Base functionality', function() {
     it('AWSP should be an object', function(){
@@ -18,7 +20,7 @@ describe('Working with AWSP', function() {
       expect(AWSP.run).to.be.a('function');
     });
     it('AWSP.run() should function', function(done){
-      AWSP.run({}, (err, params)=>{
+      AWSP.run(testData, (err, params)=>{
         expect(err).to.not.be.an('error');
         expect(params.config.region).to.be.a('string');
         expect(params.config.account).to.be.a('string');

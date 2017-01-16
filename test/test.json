@@ -1,0 +1,53 @@
+{
+  "config":{
+    "region": "us-east-1",
+    "account": null
+  },
+  "services": [
+    {
+      "type": "iam"
+    },
+    {
+      "type": "apigateway"
+    },
+    {
+      "type": "cloudfront"
+    },
+    {
+      "type": "cognito"
+    },
+    {
+      "type": "elasticache"
+    },
+    {
+      "type": "elastisearch"
+    },
+    {
+      "type": "dynamodb"
+    },
+    {
+      "type": "lambda"
+    },
+    {
+      "type": "s3"
+    },
+    {
+      "type": "ses"
+    },
+    {
+      "type": "sns"
+    },
+    {
+      "type": "sqs"
+    },
+    {
+      "type": "stepfunction"
+    },
+    {
+      "type": "vpc"
+    },
+    {
+      "type": "dynamodb"
+    }
+  ]
+}
